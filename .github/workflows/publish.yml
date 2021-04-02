@@ -1,12 +1,13 @@
-name: "🚀 release"
+name: "🚀 publish"
 
 on:
-    release:
-        types: [published]
+    push:
+        branches:
+          - master
 
 jobs:
     release:
-        name: "🚀 release"
+        name: "🚀 publish"
         runs-on: ubuntu-latest
         steps:
             - name: "📚 checkout"
@@ -18,5 +19,6 @@ jobs:
                   registry-url: https://registry.npmjs.org
             - name: "📦 publish"
               run: npm publish --access public
+              # working-directory: npx_card
               env:
                   NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
