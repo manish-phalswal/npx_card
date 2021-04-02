@@ -1,28 +1,22 @@
 {
-  "name": "manish_kumar",
-  "version": "3.0.0",
-  "description": "A personal card for Manish Kumar (@anmol098)",
-  "main": "card.js",
+  "name": "npx_card",
+  "version": "1.6.0",
+  "description": "A personal card for Manish Kumar (@manish-phalswal)",
+  "main": "/bin/card.js",
   "bin": {
-    "anmol": "./card.js"
+    "bitandbang": "./bin/card.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anmol098/npx_card.git"
+    "url": "git+https://github.com/manish-phalswal/npx_card.git"
   },
+  "homepage": " ",
   "scripts": {
-    "test": "node card.js",
-    "pub": "npm version major & npm publish"
-  },
-  "dependencies": {
-    "boxen": "^4.2.0",
-    "chalk": "^4.1.0",
-    "clear": "^0.1.0",
-    "cli-spinners": "^2.5.0",
-    "inquirer": "^7.3.2",
-    "open": "^7.0.4",
-    "ora": "^5.1.0",
-    "request": "^2.88.2"
+    "prepublish": "npm run build",
+    "build": "node build.js",
+    "dev": "npm run build && node ./bin/card.js",
+    "lint": "standard",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "card",
@@ -32,6 +26,22 @@
     "npx card",
     "business card"
   ],
-  "author": "Manish Kumar <manishphalswal1995@gmail.com>",
-  "license": "ISC"
+  "author": "Manish Kumar <manishphalswal1995@gmail.com> (https://github.com/manish-phalswal)",
+  "license": "MIT",
+  "files": [
+    "bin/card.js",
+    "bin/output"
+  ],
+  "devDependencies": {
+    "boxen": "^2.1.0",
+    "chalk": "^2.4.1",
+    "standard": "^12.0.1"
+  },
+  "bugs": {
+    "url": "https://github.com/manish-phalswal/npx_card/issues"
+  },
+  "dependencies": {},
+  "publishConfig": {
+    "registry": "https://npm.registry.github.com/"
+  }
 }
