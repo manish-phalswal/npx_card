@@ -1,5 +1,5 @@
 {
-  "name": "npx_card",
+  "name": "@manish_kumar/npx_card",
   "version": "1.6.0",
   "description": "A personal card for Manish Kumar (@manish-phalswal)",
   "main": "/bin/card.js",
